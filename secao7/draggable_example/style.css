@@ -1,0 +1,18 @@
+#item {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    text-align: center;
+    line-height: 150px;
+    cursor: grab;
+}
+
+#area-drop {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed gray;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 200px;
+}
