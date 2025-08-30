@@ -1,10 +1,15 @@
 import express from "express";
-import morgan from 'morgan';
 
-export const app = express();
+const app = express();
 const port = 3000;
 
-app.use(morgan('short'));
+function logger(req, res, next) {
+  console.log("Request Method: ", req.method);
+  console.log("Request URL: ", req.url);
+  next();
+}
+
+app.use(logger);
 
 app.get("/", (req, res) => {
   res.send("Hello");

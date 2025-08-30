@@ -1,10 +1,9 @@
 import express from "express";
-import morgan from 'morgan';
+import morgan from "morgan";
 
-export const app = express();
+const app = express();
 const port = 3000;
-
-app.use(morgan('short'));
+app.use(morgan("combined"));
 
 app.get("/", (req, res) => {
   res.send("Hello");
